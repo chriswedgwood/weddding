@@ -34,8 +34,12 @@ const Routes: React.FC<RouteComponentProps> = props => {
   const [loggedIn, setLoggedIn] = React.useState(true);
   return (
     <div className="background">
+      <div className="container-fluid h-100">
+      <div className="row justify-content-center h-100">
+      <div className="content-bar col-5">
+      
       <Header />
-      <TransitionGroup>
+      <TransitionGroup className="transition-group h-100">
         <CSSTransition
           key={props.location.key}
           timeout={500}
@@ -62,7 +66,8 @@ const Routes: React.FC<RouteComponentProps> = props => {
             <Route component={NotFoundPage} />
           </Switch>
         </CSSTransition>
-      </TransitionGroup>
+      </TransitionGroup></div></div>
+    </div>
     </div>
   );
 };

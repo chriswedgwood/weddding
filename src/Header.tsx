@@ -1,7 +1,7 @@
 import * as React from "react";
 import { NavLink, RouteComponentProps, withRouter } from "react-router-dom";
 import "url-search-params-polyfill";
-import logo from "./love.jpg";
+import logo from "./logo.png";
 
 
 const Header: React.FC<RouteComponentProps> = props => {
@@ -25,7 +25,7 @@ const Header: React.FC<RouteComponentProps> = props => {
     <header className="header">
       
       <img src={logo} className="header-logo" alt="logo" />
-      <h1 className="header-title">Emma and Chris's Wedding</h1>
+      
       <nav>
         <NavLink
           to="/home"
