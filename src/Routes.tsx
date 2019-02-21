@@ -20,6 +20,7 @@ import LoginPage from "./LoginPage";
 import NotFoundPage from "./NotFoundPage";
 import HomePage from "./HomePage";
 import VenuePage from "./VenuePage";
+import CeremonyPage from "./CeremonyPage";
 
 
 const RoutesWrap: React.FC = () => {
@@ -47,10 +48,10 @@ const Routes: React.FC<RouteComponentProps> = props => {
         >
           <Switch>
             <Redirect exact={true} from="/" to="/home" />
-            <Route exact={true} path="/products" component={ProductsPage} />
-            <Route exact={true} path="/home" component={HomePage} />
-            <Route exact={true} path="/venue" component={VenuePage} />
-            <Route path="/products/:id" component={ProductPage} />
+            <Route exact={true} path="/ceremony" component={CeremonyPage} />
+            <Route exact={true} path="/reception" component={ReceptionPage} />
+            <Route exact={true} path="/accomodation" component={AccomodationPage} />
+            <Route path="/registry" component={RegistryPage} />
             <Route path="/admin">
               {loggedIn ? (
                 <Suspense

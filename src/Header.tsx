@@ -32,8 +32,8 @@ const Header: React.FC<RouteComponentProps> = props => {
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse>
     <Nav className="mr-auto">
-      <Nav.Link href="#features">Features</Nav.Link>
-      <Nav.Link href="#pricing">Pricing</Nav.Link>
+      <Nav.Link href="/home">Features</Nav.Link>
+      <Nav.Link href="/ceremony">Ceremony</Nav.Link>
       
     </Nav>
     <Nav>
