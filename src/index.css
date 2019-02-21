@@ -1,14 +1,49 @@
 /* Extra small devices (portrait phones, less than 576px)*/
-@media (max-width: 575.98px) {  }
+@media (max-width: 575.98px) {  
+  .header-logo {
+    
+    height: 100px;
+  }
+
+
+.parent-row  {
+  height: 100vh;
+  
+}
+
+.inner-pink {
+
+  border-right: 6px double #f0c6c9;
+
+  
+}
+
+.outer-blue{
+  background: #182955;
+  
+}
+
+
+
+.pink-border-box{
+  
+  border-right: 6px double #f0c6c9;
+  background: #182955;
+}
+}
 
 /* Small devices (landscape phones, less than 768px)*/
-@media (max-width: 767.98px) { }
+@media (max-width: 767.98px) { 
+
+
+
+}
 
 /* Medium devices (tablets, less than 992px)*/
 @media (max-width: 991.98px) {  }
 
 /* Large devices (desktops, less than 1200px)*/
-@media (max-width: 1199.98px) { }
+@media (max-width: 1199.98px) { 
 
 /* Extra large devices (large desktops)
 /* No media query since the extra-large breakpoint has no upper bound on its width*/
@@ -33,8 +68,8 @@ code {
   padding: 20px;
   font-size: large;
   height:100%;
-  border-left: 6px double #f0c6c9;
-  border-right: 6px double #f0c6c9;
+ /* border-left: 6px double #f0c6c9;
+  border-right: 6px double #f0c6c9;*/
 }
 
 .product-list {
@@ -50,19 +85,16 @@ code {
 .header {
   text-align: center;
 
-  height: 350px;
-  padding: 20px;
+ /* height: 350px;*/
+  
   color: #8D7A52;
-  border-top: 6px double #f0c6c9;
+ /* border-top: 6px double #f0c6c9;
   border-left: 6px double #f0c6c9;
-  border-right: 6px double #f0c6c9;
+  border-right: 6px double #f0c6c9;*/
   
 }
 
-.header-logo {
-  animation: header-logo-spin infinite 20s linear;
-  height: 250px;
-}
+
 
 /*@keyframes header-logo-spin {
   from {
@@ -181,3 +213,4 @@ code {
  
 }
 
+}

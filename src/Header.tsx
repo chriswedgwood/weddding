@@ -28,22 +28,20 @@ const Header: React.FC<RouteComponentProps> = props => {
       <img src={logo} className="header-logo" alt="logo" />
       
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-  <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+  <Navbar.Brand href="/">Home</Navbar.Brand>
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse>
-    <Nav className="mr-auto">
-      <Nav.Link href="/home">Features</Nav.Link>
+    <Nav className="mr-auto">      
       <Nav.Link href="/ceremony">Ceremony</Nav.Link>
-      
+      <Nav.Link href="/reception">Reception</Nav.Link>
+      <Nav.Link href="/accomodation">Accomodation</Nav.Link>
+      <Nav.Link href="/registry">Registry</Nav.Link>
+      <Nav.Link href="/rsvp">Rsvp</Nav.Link>
+      <Nav.Link href="/photos">Photos</Nav.Link>
     </Nav>
-    <Nav>
-      <Nav.Link href="#deets">More deets</Nav.Link>
-      <Nav.Link eventKey={2} href="#memes">
-        Dank memes
-      </Nav.Link>
-    </Nav>
+    
   </Navbar.Collapse>
-</Navbar>;
+</Navbar>
     </header>
   );
 };

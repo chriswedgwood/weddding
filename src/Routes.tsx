@@ -21,7 +21,9 @@ import NotFoundPage from "./NotFoundPage";
 import HomePage from "./HomePage";
 import VenuePage from "./VenuePage";
 import CeremonyPage from "./CeremonyPage";
-
+import ReceptionPage from "./ReceptionPage";
+import AccomodationPage from "./AccomodationPage";
+import RegistryPage from "./RegistryPage";
 
 const RoutesWrap: React.FC = () => {
   return (
@@ -34,42 +36,60 @@ const RoutesWrap: React.FC = () => {
 const Routes: React.FC<RouteComponentProps> = props => {
   const [loggedIn, setLoggedIn] = React.useState(true);
   return (
-    
-      <div className="container-fluid h-100">
-      <div className="row justify-content-center h-100">
-      <div className="content-bar col-5">
-      
-      <Header />
-      <TransitionGroup className="transition-group h-100">
-        <CSSTransition
-          key={props.location.key}
-          timeout={500}
-          classNames="animate"
-        >
-          <Switch>
-            <Redirect exact={true} from="/" to="/home" />
-            <Route exact={true} path="/ceremony" component={CeremonyPage} />
-            <Route exact={true} path="/reception" component={ReceptionPage} />
-            <Route exact={true} path="/accomodation" component={AccomodationPage} />
-            <Route path="/registry" component={RegistryPage} />
-            <Route path="/admin">
-              {loggedIn ? (
-                <Suspense
-                  fallback={<div className="page-container">Loading...</div>}
+    <div className="container-fluid ">
+      <div className="row justify-content-center ">
+        <div className="col-10 parent-row">
+        
+          <div className="row justify-content-center h-100 ">
+            <div className="content-bar col-12 inner-pink ">
+              <Header />
+              <TransitionGroup className="transition-group">
+                <CSSTransition
+                  key={props.location.key}
+                  timeout={500}
+                  classNames="animate"
                 >
-                  <AdminPage />
-                </Suspense>
-              ) : (
-                <Redirect to="/login" />
-              )}
-            </Route>
-            <Route path="/login" component={LoginPage} />
-            <Route component={NotFoundPage} />
-          </Switch>
-        </CSSTransition>
-      </TransitionGroup></div></div>
+                  <Switch>
+                    <Redirect exact={true} from="/" to="/home" />
+                    <Route
+                      exact={true}
+                      path="/ceremony"
+                      component={CeremonyPage}
+                    />
+                    <Route
+                      exact={true}
+                      path="/reception"
+                      component={ReceptionPage}
+                    />
+                    <Route
+                      exact={true}
+                      path="/accomodation"
+                      component={AccomodationPage}
+                    />
+                    <Route path="/registry" component={RegistryPage} />
+                    <Route path="/admin">
+                      {loggedIn ? (
+                        <Suspense
+                          fallback={
+                            <div className="page-container">Loading...</div>
+                          }
+                        >
+                          <AdminPage />
+                        </Suspense>
+                      ) : (
+                        <Redirect to="/login" />
+                      )}
+                    </Route>
+                    <Route path="/login" component={LoginPage} />
+                    <Route component={NotFoundPage} />
+                  </Switch>
+                </CSSTransition>
+              </TransitionGroup>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    
   );
 };
 
