@@ -33,7 +33,7 @@ const RoutesWrap: React.FC = () => {
 const Routes: React.FC<RouteComponentProps> = props => {
   const [loggedIn, setLoggedIn] = React.useState(true);
   return (
-    <div className="background">
+    
       <div className="container-fluid h-100">
       <div className="row justify-content-center h-100">
       <div className="content-bar col-5">
@@ -68,7 +68,7 @@ const Routes: React.FC<RouteComponentProps> = props => {
         </CSSTransition>
       </TransitionGroup></div></div>
     </div>
-    </div>
+    
   );
 };
 
