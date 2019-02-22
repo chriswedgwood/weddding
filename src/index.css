@@ -11,25 +11,11 @@
   
 }
 
-.inner-pink {
-
-  border-right: 6px double #f0c6c9;
-
-  
-}
-
-.outer-blue{
-  background: #182955;
-  
-}
 
 
 
-.pink-border-box{
-  
-  border-right: 6px double #f0c6c9;
-  background: #182955;
-}
+
+
 }
 
 /* Small devices (landscape phones, less than 768px)*/
@@ -68,8 +54,13 @@ code {
   padding: 20px;
   font-size: large;
   height:100%;
- /* border-left: 6px double #f0c6c9;
-  border-right: 6px double #f0c6c9;*/
+ 
+}
+
+.transition-group
+{
+ border-left: 6px double #f0c6c9;
+  border-right: 6px double #f0c6c9;
 }
 
 .product-list {
@@ -88,9 +79,9 @@ code {
  /* height: 350px;*/
   
   color: #8D7A52;
- /* border-top: 6px double #f0c6c9;
+  border-top: 6px double #f0c6c9;
   border-left: 6px double #f0c6c9;
-  border-right: 6px double #f0c6c9;*/
+  border-right: 6px double #f0c6c9;
   
 }
 

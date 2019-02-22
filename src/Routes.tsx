@@ -37,11 +37,9 @@ const Routes: React.FC<RouteComponentProps> = props => {
   const [loggedIn, setLoggedIn] = React.useState(true);
   return (
     <div className="container-fluid ">
-      <div className="row justify-content-center ">
-        <div className="col-10 parent-row">
-        
-          <div className="row justify-content-center h-100 ">
-            <div className="content-bar col-12 inner-pink ">
+     
+      <div className="row justify-content-center h-100">
+      <div className="content-bar col-5">
               <Header />
               <TransitionGroup className="transition-group">
                 <CSSTransition
@@ -88,8 +86,7 @@ const Routes: React.FC<RouteComponentProps> = props => {
             </div>
           </div>
         </div>
-      </div>
-    </div>
+    
   );
 };
 
