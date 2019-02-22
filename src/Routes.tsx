@@ -38,7 +38,7 @@ const Routes: React.FC<RouteComponentProps> = props => {
   return (
     <div className="container-fluid main-container ">
      
-      <div className="row justify-content-center parent-row">
+      <div className="row justify-content-center parent-row h-100">
       <div className="content-bar col-10 col-ms-5">
               <Header />
               <TransitionGroup className="transition-group">
