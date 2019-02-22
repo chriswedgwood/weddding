@@ -36,10 +36,10 @@ const RoutesWrap: React.FC = () => {
 const Routes: React.FC<RouteComponentProps> = props => {
   const [loggedIn, setLoggedIn] = React.useState(true);
   return (
-    <div className="container-fluid ">
+    <div className="container-fluid main-container ">
      
-      <div className="row justify-content-center h-100">
-      <div className="content-bar col-5">
+      <div className="row justify-content-center parent-row">
+      <div className="content-bar col-10 col-ms-5">
               <Header />
               <TransitionGroup className="transition-group">
                 <CSSTransition
