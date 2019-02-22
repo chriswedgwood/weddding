@@ -27,9 +27,9 @@ const Header: React.FC<RouteComponentProps> = props => {
       
       <img src={logo} className="header-logo" alt="logo" />
       
-      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+      <Navbar collapseOnSelect className="navbar" expand="lg">
   <Navbar.Brand href="/">Home</Navbar.Brand>
-  <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+  <Navbar.Toggle className="toggler" aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse>
     <Nav className="mr-auto">      
       <Nav.Link href="/ceremony">Ceremony</Nav.Link>
