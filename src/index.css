@@ -240,3 +240,21 @@ background-image: url("bbr-background.png");
   border-right: 6px double #f0c6c9;
   
 }
+
+
+
+
+
+.nav-item{
+  padding-right: 10px !important;
+
+}
+
+
+
+.navitem-text:hover{
+  cursor:pointer !important;
+  border-bottom: #8D7A52 solid 2px !important;
+  margin-bottom: -2px !important;
+  color: #8D7A52 !important;
+}

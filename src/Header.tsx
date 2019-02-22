@@ -2,8 +2,8 @@ import * as React from "react";
 import { RouteComponentProps, withRouter } from "react-router-dom";
 import "url-search-params-polyfill";
 import logo from "./logo.png";
-import {Navbar, Nav , NavDropdown} from "react-bootstrap"
-
+import { Navbar, Nav, NavItem } from "react-bootstrap";
+import { LinkContainer } from "react-router-bootstrap";
 
 const Header: React.FC<RouteComponentProps> = props => {
   const [search, setSearch] = React.useState("");
@@ -24,24 +24,41 @@ const Header: React.FC<RouteComponentProps> = props => {
 
   return (
     <header className="header">
-      
       <img src={logo} className="header-logo" alt="logo" />
-      
+
       <Navbar collapseOnSelect className="navbar" expand="lg">
-  <Navbar.Brand href="/">Home</Navbar.Brand>
-  <Navbar.Toggle className="toggler" aria-controls="responsive-navbar-nav" />
-  <Navbar.Collapse>
-    <Nav className="mr-auto">      
-      <Nav.Link href="/ceremony">Ceremony</Nav.Link>
-      <Nav.Link href="/reception">Reception</Nav.Link>
-      <Nav.Link href="/accomodation">Accomodation</Nav.Link>
-      <Nav.Link href="/registry">Registry</Nav.Link>
-      <Nav.Link href="/rsvp">Rsvp</Nav.Link>
-      <Nav.Link href="/photos">Photos</Nav.Link>
-    </Nav>
-    
-  </Navbar.Collapse>
-</Navbar>
+        
+        <Navbar.Toggle
+          className="toggler"
+          aria-controls="responsive-navbar-nav"
+          
+        />
+        <Navbar.Collapse >
+          <Nav>
+          <Nav.Link to="/home">
+            <NavItem><div className="navitem-text">Home</div></NavItem>
+          </Nav.Link >
+            <LinkContainer to="/ceremony">
+              <NavItem><div className="navitem-text">Ceremony</div></NavItem>
+            </LinkContainer>
+            <LinkContainer to="/reception">
+              <NavItem><div className="navitem-text">Reception</div></NavItem>
+            </LinkContainer>
+            <LinkContainer to="/accomodation">
+              <NavItem><div className="navitem-text">Accomodation</div></NavItem>
+            </LinkContainer>
+            <LinkContainer to="/registry">
+              <NavItem><div className="navitem-text">Registry</div></NavItem>
+            </LinkContainer>
+            <LinkContainer to="/rsvp">
+              <NavItem><div className="navitem-text">Rsvp</div></NavItem>
+            </LinkContainer>
+            <LinkContainer to="/photos">
+              <NavItem><div className="navitem-text">Photos</div></NavItem>
+            </LinkContainer>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
     </header>
   );
 };
