@@ -35,9 +35,9 @@ const Header: React.FC<RouteComponentProps> = props => {
         />
         <Navbar.Collapse >
           <Nav>
-          <Nav.Link to="/home">
-            <NavItem><div className="navitem-text">Home</div></NavItem>
-          </Nav.Link >
+          <LinkContainer to="/home">
+              <NavItem><div className="navitem-text">Home</div></NavItem>
+            </LinkContainer>
             <LinkContainer to="/ceremony">
               <NavItem><div className="navitem-text">Ceremony</div></NavItem>
             </LinkContainer>

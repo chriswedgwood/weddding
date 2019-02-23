@@ -44,7 +44,7 @@ const Routes: React.FC<RouteComponentProps> = props => {
               <TransitionGroup className="transition-group">
                 <CSSTransition
                   key={props.location.key}
-                  timeout={500}
+                  timeout={0}
                   classNames="animate"
                 >
                   <Switch>

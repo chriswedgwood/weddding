@@ -258,3 +258,8 @@ background-image: url("bbr-background.png");
   margin-bottom: -2px !important;
   color: #8D7A52 !important;
 }
+
+.navbar-collapse{
+
+  justify-content: center!important;
+}
