@@ -1,6 +1,8 @@
 FROM abiosoft/caddy:0.10.6
 
-RUN apk add --update nodejs nodejs-npm
+RUN apk update && \
+    apk add --update nodejs  && \
+    npm install newman --global
 
 COPY ./compose/production/caddy/Caddyfile /etc/Caddyfile
 
