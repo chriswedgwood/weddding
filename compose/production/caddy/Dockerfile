@@ -9,8 +9,8 @@ RUN echo http://nl.alpinelinux.org/alpine/v3.5/main > /etc/apk/repositories; \
 RUN apk update
 RUN apk upgrade
 RUN apk add --upgrade apk-tools@edge
-RUN apk add nodejs
-RUN apk add npm
+RUN apk add nodejs-current
+
 COPY ./compose/production/caddy/Caddyfile /etc/Caddyfile
 
 COPY . /app
