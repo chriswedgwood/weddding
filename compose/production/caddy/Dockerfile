@@ -10,10 +10,6 @@ COPY . /app
 
 WORKDIR /app
 
-RUN curl -o npm-f3-install.sh https://gist.githubusercontent.com/SuperPaintman/851b330c08b2363aea1c870f0cc1ea5a/raw/4d3e792c6a54def095f451eeedc50d33ae361339/npm-f3-install.sh
-RUN chmod +x npm-f3-install.sh
-RUN ./npm-f3-install.sh production 
-
 RUN npm install --production
 RUN npm run build
 
