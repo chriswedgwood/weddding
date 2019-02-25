@@ -1,0 +1,35 @@
+version: '3'
+
+volumes:
+  production_caddy: {}
+
+services:
+
+  node:
+    build:
+      context: .
+      dockerfile: ./compose/production/node/Dockerfile
+    image: wedding_production_node
+    command: /start
+    volumes:
+      - .:/app
+    ports:
+      - "3000:3000"
+
+  caddy:
+    build:
+      context: .
+      dockerfile: ./compose/production/caddy/Dockerfile
+    image: wedding_production_caddy
+    depends_on:
+      - node
+    volumes:
+      - production_caddy:/root/.caddy
+    env_file:
+      - ./.envs/.production/.caddy
+    ports:
+      - "0.0.0.0:80:80"
+      - "0.0.0.0:443:443"
+      
+
+
