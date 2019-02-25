@@ -10,9 +10,6 @@ COPY . /app
 
 WORKDIR /app
 
-RUN npm install --production
-RUN npm run build
-
 COPY ./compose/production/node/start /start
 RUN sed -i 's/\r//' /start
 RUN chmod +x /start
