@@ -5,17 +5,6 @@ volumes:
 
 services:
 
-  node:
-    build:
-      context: .
-      dockerfile: ./compose/production/node/Dockerfile
-    image: wedding_production_node
-    command: /start
-    volumes:
-      - .:/app
-    ports:
-      - "5000:5000"
-
   caddy:
     build:
       context: .

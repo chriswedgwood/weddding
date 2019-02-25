@@ -3,11 +3,7 @@ www.{$DOMAIN_NAME} {
 }
 
 {$DOMAIN_NAME} {
-    proxy / node:5000 {
-        header_upstream Host {host}
-        header_upstream X-Real-IP {remote}
-        header_upstream X-Forwarded-Proto {scheme}
-    }
+    root /app/build
     log stdout
     errors stdout
     gzip
