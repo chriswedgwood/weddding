@@ -37,56 +37,37 @@ const Routes: React.FC<RouteComponentProps> = props => {
   const [loggedIn, setLoggedIn] = React.useState(true);
   return (
     <div className="container-fluid main-container ">
-     
       <div className="row justify-content-center parent-row h-100">
-      <div className="content-bar col-10 col-ms-5">
-              <Header />
-              <TransitionGroup className="transition-group">
-                <CSSTransition
-                  key={props.location.key}
-                  timeout={0}
-                  classNames="animate"
-                >
-                  <Switch>
-                    <Redirect exact={true} from="/" to="/home" />
-                    <Route
-                      exact={true}
-                      path="/ceremony"
-                      component={CeremonyPage}
-                    />
-                    <Route
-                      exact={true}
-                      path="/reception"
-                      component={ReceptionPage}
-                    />
-                    <Route
-                      exact={true}
-                      path="/accomodation"
-                      component={AccomodationPage}
-                    />
-                    <Route path="/registry" component={RegistryPage} />
-                    <Route path="/admin">
-                      {loggedIn ? (
-                        <Suspense
-                          fallback={
-                            <div className="page-container">Loading...</div>
-                          }
-                        >
-                          <AdminPage />
-                        </Suspense>
-                      ) : (
-                        <Redirect to="/login" />
-                      )}
-                    </Route>
-                    <Route path="/login" component={LoginPage} />
-                    <Route component={NotFoundPage} />
-                  </Switch>
-                </CSSTransition>
-              </TransitionGroup>
-            </div>
-          </div>
+        <div className="content-bar col-10 col-ms-5">
+          <Header />
+          <TransitionGroup className="transition-group">
+            <CSSTransition
+              key={props.location.key}
+              timeout={0}
+              classNames="animate"
+            >
+              <Switch>
+                <Route exact path="/" component={HomePage} />
+                <Route exact={true} path="/ceremony" component={CeremonyPage} />
+                <Route
+                  exact={true}
+                  path="/reception"
+                  component={ReceptionPage}
+                />
+                <Route
+                  exact={true}
+                  path="/accomodation"
+                  component={AccomodationPage}
+                />
+                <Route path="/registry" component={RegistryPage} />
+                <Redirect to="/" />
+                <Route component={NotFoundPage} />
+              </Switch>
+            </CSSTransition>
+          </TransitionGroup>
         </div>
-    
+      </div>
+    </div>
   );
 };
 
