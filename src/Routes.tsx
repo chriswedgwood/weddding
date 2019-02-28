@@ -79,7 +79,7 @@ const Routes: React.FC<RouteComponentProps> = props => {
                       )}
                     </Route>
                     <Route path="/login" component={LoginPage} />
-                    <Route component={NotFoundPage} />
+                    <Route component={HomePage} />
                   </Switch>
                 </CSSTransition>
               </TransitionGroup>
