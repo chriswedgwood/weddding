@@ -2,6 +2,15 @@ import * as React from "react";
 import { RouteComponentProps, withRouter } from "react-router-dom";
 import "url-search-params-polyfill";
 import logo from "./logo.png";
+import home from "./home.png";
+import church from "./church3.png"
+import party from "./party4.png"
+import bed from "./bed.png"
+import gift from "./gift.png"
+import rsvp from "./rsvp.png"
+import photo from "./photo.png"
+
+
 import { Navbar, Nav, NavItem } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 
@@ -36,25 +45,27 @@ const Header: React.FC<RouteComponentProps> = props => {
         <Navbar.Collapse >
           <Nav>
           <LinkContainer to="/home">
-              <NavItem><div className="navitem-text">Home</div></NavItem>
+              <NavItem><a href="/">
+          <img src={home} style={{width:63, marginTop: -7}} />
+          </a></NavItem>
             </LinkContainer>
             <LinkContainer to="/ceremony">
-              <NavItem><div className="navitem-text">Ceremony</div></NavItem>
+              <NavItem> <img src={church} style={{width:74, marginTop: -7}} /></NavItem>
             </LinkContainer>
             <LinkContainer to="/reception">
-              <NavItem><div className="navitem-text">Reception</div></NavItem>
+              <NavItem><img src={party} style={{width:60, marginTop: -7}} /></NavItem>
             </LinkContainer>
             <LinkContainer to="/accomodation">
-              <NavItem><div className="navitem-text">Accomodation</div></NavItem>
+              <NavItem><img src={bed} style={{width:100, marginTop: -7}} /></NavItem>
             </LinkContainer>
             <LinkContainer to="/registry">
-              <NavItem><div className="navitem-text">Registry</div></NavItem>
+              <NavItem><img src={gift} style={{width:70, marginTop: -7}} /></NavItem>
             </LinkContainer>
             <LinkContainer to="/rsvp">
-              <NavItem><div className="navitem-text">Rsvp</div></NavItem>
+              <NavItem><img src={rsvp} style={{width:80, marginTop: -7}} /></NavItem>
             </LinkContainer>
             <LinkContainer to="/photos">
-              <NavItem><div className="navitem-text">Photos</div></NavItem>
+              <NavItem><img src={photo} style={{width:80, marginTop: -7}} /></NavItem>
             </LinkContainer>
           </Nav>
         </Navbar.Collapse>
